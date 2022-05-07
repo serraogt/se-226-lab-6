@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+double mult(int);
+
+int main() {
+cout<< "insert a value";
+int x;
+cin>> x;
+
+cout<<mult(x);
+
+
+return 0;
+}
+
+
+double mult(int n) {
+    int bir=1;
+        if (n <= 0) {
+            return 1;}
+        else {
+            bir= bir *((n / (n + 2)) - 10) ;
+            return bir* mult(n-1); ;
+        }
+
+}
